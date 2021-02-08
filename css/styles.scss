@@ -45,7 +45,7 @@ body {
   cursor: pointer;
   position: absolute;
   top: 40%;
-  width: 6.7em;
+  width: 5em;
   height: auto;
   padding: 1.4em;
   color: white;
@@ -64,13 +64,13 @@ body {
   display: none;
   color: white;
   font-family: klavika;
-  font-size: 4.8em;
+  font-size: 2.8em;
   line-height: 1.1em;
   text-decoration: underline white 1px;
   text-underline-position: under;
   padding: 0.4em;
   position: absolute;
-  width: 33%;
+  width: 50%;
   opacity: 0;
   animation: fadeIn 1s forwards;
   -moz-animation: fadeIn 1s forwards;
@@ -84,7 +84,7 @@ body {
 }
 .text-1 {
   top: 38%;
-  left: 3%;
+  left: 1.8em;
   text-align: left;
 }
 .text-2 {
@@ -112,7 +112,7 @@ body {
   text-align: right;
   text-decoration: none;
 }
-.icon {
+img.icon {
   width: 1.6em;
   height: auto;
 }
@@ -123,14 +123,15 @@ body {
 
 .monk img {
   position: absolute;
-  width: 7.5em;
+  width: 7.6em;
   height: auto;
   top: 40%;
   right: 50%;
-  animation-name: scale-bump, fadeOut;
-  animation-duration: 3s, 5s;
-  animation-fill-mode: forwards, forwards;
-  animation-timing-function: ease, linear;
+  animation-name: scaleUp, moveUpDown, fadeOut;
+  animation-duration: 0.8s, 1.5s, 4s;
+  animation-fill-mode: forwards, forwards, forwards;
+  animation-timing-function: ease-in-out, ease-in-out, linear;
+  animation-delay: 0s, 0.8s,2s;
 }
 
 .text-monk {
@@ -139,33 +140,57 @@ body {
   position: absolute;
   top: 61%;
   left: 46.5%;
+  opacity: 0;
   color: white;
   font-family: klavika;
   font-size: 1.3em;
   animation-name: fadeOut;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
   .patience {
-    animation-name: fadeIn-bump;
-    animation-duration: 1s;
+    animation-name: fadeIn, scaleUp, moveLeft;
+    animation-duration: 0.5s 0.5s 0.5s;
+    animation-fill-mode: forwards, forwards, forwards;
+    animation-timing-function: ease-in-out, ease-in-out, ease-in-out;
+    animation-delay: 0s, 0s, 1s;
+    .sign1 {
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1s;
   }
-  .sign1 {
-    animation-name: fadeIn-bump, fadeOut;
-    animation-duration: 1s, 0.1s;
-    animation-fill-mode: forwards, forwards;
-    animation-delay: 0.5s, 1s;
   }
+ 
   .young {
-    opacity: 0;
     animation-name: fadeInMove;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-delay: 1s;
   }
 }
+
+/*----media querys------------------------------------------*/
+@media (min-width: 768px) {
+  .text {
+    font-size: 3.5em;
+    line-height: 1.1em;
+    width: 33%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text {
+    font-size: 4.8em;
+    line-height: 1.1em;
+  }
+  .prev img,
+  .next img {
+    width: 6.7em;
+  }
+}
+
+/*-----------------------------------------------------*/
 
 @keyframes fadeIn {
   from {
@@ -185,33 +210,36 @@ body {
   }
 }
 
-@keyframes scale-bump {
-  0% {
-    transform: scale(0.0);
-    opacity: 0;
-  }
-  20% {
-   
-    transform: translateY(15px);
+@keyframes scaleUp {
+   from {
+     transform: scale(0)
+   }
+   to {
+     transform: scale(1)
+   }
+}
+
+@keyframes moveUpDown {
+  10% {
+    transform: translateY(-10px);
   }
   30% {
-    opacity: 1;
-    transform:  scale(1.0);
-  }
-  40% {
-    transform: translateY(-15px);
-  }
-  50% {
     transform: translateY(10px);
   }
-  70% {
-    transform:  translateY(-10px);
+  50% {
+    transform: translateY(-10px);
   }
-  80% {
+  70% {
     transform: translateY(5px);
   }
   100% {
-    // transform: translateY(-10px);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes moveLeft {
+  100% {
+      transform: translateX(-3em);
   }
 }
 
@@ -221,30 +249,32 @@ body {
     transform: scale(0);
   }
   20% {
+  
     transform: scale(1.5);
   }
   40% {
     transform: scale(1);
   }
   50% {
-     transform: scale(1.3);
+    transform: scale(1.3);
   }
   60% {
-    opacity: 1;
+ 
     transform: scale(1);
   }
   100% {
-    transform: translateX(-3em)
+      opacity: 1;
+    transform: translateX(-3em);
   }
 }
 
 @keyframes fadeInMove {
   0% {
-    opacity: 0; 
-    transform:translateX(-18em);
+    opacity: 0;
+    transform: translateX(-18em);
   }
   100% {
     opacity: 1;
-    transform: translateX(-3em)
+    transform: translateX(-3em);
   }
 }

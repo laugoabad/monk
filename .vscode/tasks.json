@@ -8,7 +8,11 @@
             "label": "Sass Compile",
             "type": "shell",
             "command": "node-sass css/styles.scss css/styles.css",
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
         }
     ]
 }
