@@ -106,7 +106,7 @@ function changeFrameSlide(elem) {
 }
 
 function changeSlideFooter(slideNumber) {
-    if (slideNumber = 0) {
+    if (slideNumber <= 0 || slideNumber > 8) {
         document.getElementById('foot-slide-text').style.display = 'none';
         document.getElementById('story').style.display = "block";
     } else {
@@ -116,5 +116,7 @@ function changeSlideFooter(slideNumber) {
 }
 
 function createSlideNumberFooter(slideNumber) {
-   document.getElementById('path').innerHTML = slideNumber;
+    if (slideNumber >= 1 && slideNumber <= 8) {
+        document.getElementById('path').innerHTML = slideNumber;
+    }
 }
