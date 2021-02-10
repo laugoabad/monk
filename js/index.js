@@ -1,6 +1,7 @@
 
 var slideNumber = 0;
 var prevSlideNumber = 0;
+var pixelsToMove = 0;
 
 function start() {
     //turns invisible the backwards arrow at the begining of the slide
@@ -28,7 +29,7 @@ function slideForwards() {
     slideNumber++;
     document.getElementById('prev').style.display = 'block'
     textAppears(slideNumber, prevSlideNumber);
-    document.getElementById('back').style.marginLeft = -slideNumber * pixelsToMove + 'px';
+    animateSlide(slideNumber * pixelsToMove);
     if (slideNumber >= 9) {
         document.getElementById('next').style.display = 'none'
     }
@@ -50,7 +51,7 @@ function slideBackwards() {
         //****stops the slide when you reach the slide start*****/
         document.getElementById('back').style.marginLeft = 0 + 'px';
     } else {
-        document.getElementById('back').style.marginLeft = -slideNumber * pixelsToMove + 'px';
+        animateSlide(slideNumber * pixelsToMove);
     }
     changeSlideFooter(slideNumber);
     textAppears(slideNumber, prevSlideNumber);
@@ -96,8 +97,7 @@ function changeFrameSlide(elem) {
     } else {
         document.getElementById('prev').style.display = 'block';
     }
-
-    document.getElementById('back').style.marginLeft = -slideNumber * pixelsToMove + 'px';
+    animateSlide(slideNumber * pixelsToMove);
     changeSlideFooter(slideNumber);
     textAppears(slideNumber, prevSlideNumber);
     markFrame(slideNumber, prevSlideNumber);
@@ -119,4 +119,16 @@ function createSlideNumberFooter(slideNumber) {
     if (slideNumber >= 1 && slideNumber <= 8) {
         document.getElementById('path').innerHTML = slideNumber;
     }
+}
+
+function animateSlide (margin) {
+    document.getElementById("back").animate([
+        // keyframes  
+        { transform: 'translateX(-'+ margin + 'px)' }
+    ], {
+        // timing options
+        duration: 700,
+        iterations: 1,
+        fill: 'forwards',
+    });
 }
