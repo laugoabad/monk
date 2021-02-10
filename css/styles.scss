@@ -86,7 +86,7 @@ body {
   bottom: 20em;
   left: 2em;
   div {
-    font-size: 1em;
+    font-size: 1.1em;
     color: white;
     opacity: 0.8;
   }
@@ -111,8 +111,8 @@ body {
   text-align: right;
 }
 .text-4 {
-  color: white;
-  top: 0;
+  position: absolute !important;
+  top: 0 !important;
   right: 1.4em;
   text-align: right;
 }
