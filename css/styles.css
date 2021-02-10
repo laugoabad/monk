@@ -15,11 +15,11 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: black;
   font-family: klavika; }
 
 .wrapper {
-  position: relative; }
+  position: relative;
+  background: black; }
 
 .sliding-background {
   opacity: 0;
@@ -29,7 +29,7 @@ body {
   transition: all 1s ease-in-out;
   animation-name: fadeIn;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 3s;
   animation-fill-mode: forwards; }
   .sliding-background img {
     width: auto;
@@ -125,7 +125,7 @@ img.icon {
   display: flex;
   align-items: center; }
 
-.intro-monk .monk img {
+#loading-monk .monk img {
   position: absolute;
   width: 7.6em;
   height: auto;
@@ -134,13 +134,14 @@ img.icon {
   left: 0;
   margin-left: auto;
   margin-right: auto;
-  animation-name: pop, moveUpDown, fadeOut;
-  animation-duration: 0.8s, 1.5s, 3s;
-  animation-fill-mode: forwards, forwards, forwards;
-  animation-timing-function: ease-in-out, ease-in-out, linear;
-  animation-delay: 0s, 0.8s, 2s; }
+  animation-name: pop, moveUpDown;
+  animation-duration: 0.8s, 2s;
+  animation-fill-mode: forwards, forwards;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-delay: 0s, 0.8s;
+  animation-iteration-count: 1, infinite; }
 
-.intro-monk .text-monk {
+#loading-monk .text-monk {
   display: flex;
   align-items: center;
   position: absolute;
@@ -152,29 +153,29 @@ img.icon {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-delay: 3s; }
-  .intro-monk .text-monk .patience {
+  #loading-monk .text-monk .patience {
     opacity: 0;
     animation-name: fadeIn, scaleUp, moveLeft;
     animation-duration: 1s, 1s, 0.5s;
     animation-fill-mode: forwards, forwards, forwards;
     animation-timing-function: ease-in-out, ease-in-out, ease-in-out;
     animation-delay: 0.5s, 0.5s, 1.5s; }
-    .intro-monk .text-monk .patience i {
+    #loading-monk .text-monk .patience i {
       font-size: 1.3em; }
-    .intro-monk .text-monk .patience .sign1 {
+    #loading-monk .text-monk .patience .sign1 {
       animation-name: fadeOut;
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
       animation-delay: 1s; }
-      .intro-monk .text-monk .patience .sign1 i {
+      #loading-monk .text-monk .patience .sign1 i {
         font-size: 1.3em; }
-  .intro-monk .text-monk .young {
+  #loading-monk .text-monk .young {
     opacity: 0;
     animation-name: fadeIn, moveRight;
     animation-duration: 1s, 2s;
     animation-fill-mode: forwards, forwards;
     animation-delay: 1.9s, 1.7s; }
-    .intro-monk .text-monk .young i {
+    #loading-monk .text-monk .young i {
       font-size: 1.3em; }
 
 .foot-slide {
@@ -300,8 +301,10 @@ img.icon {
     transform: scale(1); } }
 
 @keyframes moveUpDown {
-  10% {
-    transform: translateY(-10px); }
+  0% {
+    transform: translateY(0px); }
+  0% {
+    transform: translateY(-5px); }
   30% {
     transform: translateY(10px); }
   50% {

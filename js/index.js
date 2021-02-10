@@ -5,7 +5,7 @@ var pixelsToMove = 0;
 
 function start() {
     //turns invisible the backwards arrow at the begining of the slide
-
+    window.onload = function () { document.getElementById("loading-monk").style.display = "none" }
     document.getElementById('prev').style.display = 'none';
     document.getElementById('foot-slide-text').style.display = 'none';
     document.getElementById('0').classList.add('square');
