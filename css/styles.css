@@ -36,11 +36,28 @@ body {
     height: 100vh;
     max-height: 100%; }
 
+.text {
+  display: none;
+  color: white;
+  font-size: 2.6em;
+  line-height: 1.1em;
+  text-decoration: underline white 1px;
+  text-underline-position: under;
+  padding: 0.4em;
+  position: absolute;
+  top: 29%;
+  width: 70%;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  -moz-animation: fadeIn 1s forwards;
+  -webkit-animation: fadeIn 1s forwards;
+  -o-animation: fadeIn 1s forwards; }
+
 .prev img,
 .next img {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 30%;
   width: 5em;
   height: auto;
   padding: 1.4em;
@@ -54,22 +71,6 @@ body {
 
 .next img {
   right: 1%; }
-
-.text {
-  display: none;
-  color: white;
-  font-size: 2.6em;
-  line-height: 1.1em;
-  text-decoration: underline white 1px;
-  text-underline-position: under;
-  padding: 0.4em;
-  position: absolute;
-  width: 70%;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-  -moz-animation: fadeIn 1s forwards;
-  -webkit-animation: fadeIn 1s forwards;
-  -o-animation: fadeIn 1s forwards; }
 
 #story {
   position: absolute;
@@ -85,22 +86,19 @@ body {
 
 .text-0 {
   display: block;
-  top: 0;
+  top: 0 !important;
   text-align: left;
   left: 0em; }
 
 .text-1 {
-  top: 38%;
   left: 1.4em;
   text-align: left; }
 
 .text-2 {
-  top: 38%;
   text-align: right;
   right: 1.8em; }
 
 .text-3 {
-  top: 31%;
   right: 1.4em;
   text-align: right; }
 
@@ -230,7 +228,11 @@ img.icon {
   .text {
     font-size: 3.4em;
     line-height: 1.1em;
-    width: 40%; }
+    width: 40%;
+    top: 37%; }
+  .prev img,
+  .next img {
+    top: 38%; }
   .text-1 {
     left: 1.2em; }
   .text-2 {
@@ -248,7 +250,8 @@ img.icon {
 @media (min-width: 1024px) {
   .text {
     font-size: 4em;
-    width: 35%; }
+    width: 35%;
+    top: 36%; }
   .logo div {
     font-size: 2.8em; } }
 

@@ -18,7 +18,8 @@ function start() {
             pixelsToMove = 810;
         } else {
             if (screen.width <= 425) {
-                pixelsToMove = 800
+                pixelsToMove = 800;
+                document.getElementById('text').style.margintop = '0px'
             }
         }
     }
