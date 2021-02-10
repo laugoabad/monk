@@ -60,21 +60,6 @@ body {
 .next img {
   right: 1%;
 }
-.logo {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 2em;
-  bottom: 2.6em;
-  div {
-    font-size: 2em;
-    color: white;
-    line-height: 1em;
-  }
-  .media {
-    letter-spacing: 0.1em;
-  }
-}
 
 .text {
   display: none;
@@ -87,6 +72,12 @@ body {
   position: absolute;
   width: 70%;
   opacity: 0;
+
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+
   animation: fadeIn 1s forwards;
   -moz-animation: fadeIn 1s forwards;
   -webkit-animation: fadeIn 1s forwards;
@@ -97,7 +88,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  bottom: 8em;
+  bottom: 9em;
   left: 2em;
   div {
     font-size: 1em;
@@ -214,17 +205,18 @@ img.icon {
 
 .foot-slide {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   position: absolute;
+  width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  // align-items: center;
   bottom: 2.6em;
   left: 2em;
-  opacity: 0.8;
   #slides {
     display: flex;
-
+    padding-bottom: 1em;
+    opacity: 0.6;
     .slide {
       font-size: 0.9em;
       border-style: dotted none dotted dotted;
@@ -242,7 +234,22 @@ img.icon {
     margin-left: 3em;
     font-size: 1em;
     color: white;
-    opacity: 0.8;
+    opacity: 0.6;
+    padding-bottom: 1em;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 6em;
+    div {
+      font-size: 2em;
+      color: white;
+      line-height: 1em;
+    }
+    .media {
+      letter-spacing: 0.1em;
+    }
   }
 }
 
@@ -259,12 +266,26 @@ img.icon {
     font-size: 3.4em;
     line-height: 1.1em;
     width: 40%;
+
+    right: auto;
+    left: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
   .text-1 {
     left: 1.2em;
   }
   .text-2 {
     right: 1.5em;
+  }
+  .foot-slide {
+    flex-direction: row;
+  }
+  #slides {
+    padding-bottom: 1em;
+  }
+  #foot-slide-text {
+    padding-bottom: 1em;
   }
 }
 
