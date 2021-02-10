@@ -77,7 +77,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  bottom: 12em;
+  bottom: 15em;
   left: 2em; }
   #story div {
     font-size: 1em;
@@ -184,7 +184,7 @@ img.icon {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  bottom: 2.6em;
+  bottom: 6em;
   left: 2em; }
   .foot-slide #slides {
     display: flex;
@@ -208,7 +208,7 @@ img.icon {
   .foot-slide .logo {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: 6em; }
     .foot-slide .logo div {
       font-size: 2em;
@@ -223,7 +223,7 @@ img.icon {
   height: 2em;
   padding: 0.2em 0.8em; }
 
-/*----MEDIA QUERYS------------------------------------------*/
+/*----MEDIA QUERYS------------------------------------------------------------------*/
 @media (min-width: 768px) {
   .text {
     font-size: 3.4em;
@@ -239,13 +239,16 @@ img.icon {
     right: 1.5em; }
   .foot-slide {
     flex-direction: row;
-    align-items: flex-end; }
-  #slides {
-    padding-bottom: 1em; }
-  #foot-slide-text {
-    padding-bottom: 1em; }
+    align-items: flex-end;
+    bottom: 2em; }
+    .foot-slide #slides {
+      padding-bottom: 1em; }
+    .foot-slide #foot-slide-text {
+      padding-bottom: 1em; }
+    .foot-slide .logo {
+      margin-left: auto; }
   #story {
-    bottom: 8em; } }
+    bottom: 10em; } }
 
 @media (min-width: 1024px) {
   .text {

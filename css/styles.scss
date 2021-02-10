@@ -83,7 +83,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  bottom: 12em;
+  bottom: 15em;
   left: 2em;
   div {
     font-size: 1em;
@@ -198,12 +198,11 @@ img.icon {
 .foot-slide {
   display: flex;
   flex-direction: column;
-
   position: absolute;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  bottom: 2.6em;
+  bottom: 6em;
   left: 2em;
   #slides {
     display: flex;
@@ -232,7 +231,7 @@ img.icon {
   .logo {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: 6em;
     div {
       font-size: 2em;
@@ -252,7 +251,7 @@ img.icon {
   padding: 0.2em 0.8em;
 }
 
-/*----MEDIA QUERYS------------------------------------------*/
+/*----MEDIA QUERYS------------------------------------------------------------------*/
 @media (min-width: 768px) {
   .text {
     font-size: 3.4em;
@@ -273,15 +272,20 @@ img.icon {
   .foot-slide {
     flex-direction: row;
     align-items: flex-end;
+    bottom: 2em;
+    #slides {
+      padding-bottom: 1em;
+    }
+    #foot-slide-text {
+      padding-bottom: 1em;
+    }
+    .logo {
+      margin-left: auto;
+    }
   }
-  #slides {
-    padding-bottom: 1em;
-  }
-  #foot-slide-text {
-    padding-bottom: 1em;
-  }
+
   #story {
-    bottom: 8em;
+    bottom: 10em;
   }
 }
 
