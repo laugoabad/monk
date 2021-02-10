@@ -64,13 +64,43 @@ function slideBackwards() {
     document.getElementById('next').style.display = 'block';
 }
 
+//******function that changes the slides indicator  */
+function changeFrameSlide(elem) {
+    slideNumber = elem.id;
+    if (slideNumber == 0) {
+        document.getElementById('prev').style.display = 'none';
+        document.getElementById('foot-slide-text').style.display = 'none';
+        document.getElementById('story').style.display = "block";
+    } else {
+        if (slideNumber >= 9) {
+            document.getElementById('next').style.display = 'none';
+        } else {
+            document.getElementById('prev').style.display = 'block';
+            animateSlide(slideNumber * pixelsToMove);
+            changeSlideFooter(slideNumber);
+            textAppears(slideNumber, prevSlideNumber);
+            markFrame(slideNumber, prevSlideNumber);
+            createSlideNumberFooter(slideNumber);
+            document.getElementById('prev').style.display = 'block';
+            document.getElementById('next').style.display = 'block'
+        }
+    }
+    prevSlideNumber = slideNumber;
+}
+
 function textAppears(textNumber, prevTextNumber) {
-    if (prevTextNumber == 0) {
+    console.log('textapp ', textNumber);
+
+    if (prevTextNumber == 0 && textNumber == 0) {
         document.getElementById('text-1').style.display = 'block';
         document.getElementById('text-0').style.display = 'none';
 
     } else {
+        console.log('entra else');
+
         document.getElementById('text-' + prevTextNumber).style.display = 'none';
+        var texto = document.getElementById('text-' + textNumber).innerText;
+        console.log('texto', texto);
         document.getElementById('text-' + textNumber).style.display = 'block';
     }
 }
@@ -82,32 +112,7 @@ function markFrame(id, prev) {
 }
 
 
-//******function that changes the slides indicator  */
-function changeFrameSlide(elem) {
-    console.log ('elem', elem.id);
-    slideNumber = elem.id;
-    console.log('num', slideNumber);
-    if (slideNumber == 0) {
-        document.getElementById('prev').style.display = 'none';
-        document.getElementById('foot-slide-text').style.display = 'none';
-        document.getElementById('story').style.display = "block";
-    } else {
-        document.getElementById('prev').style.display = 'block';
-        animateSlide(slideNumber * pixelsToMove);
-        changeSlideFooter(slideNumber);
-        textAppears(slideNumber, prevSlideNumber);
-        markFrame(slideNumber, prevSlideNumber);
-        createSlideNumberFooter(slideNumber)
-    }
-    if (slideNumber >= 9) {
-        document.getElementById('next').style.display = 'none';
-    } else {
-        document.getElementById('prev').style.display = 'block';
-        document.getElementById('next').style.display = 'block'
-    }
-    
-    prevSlideNumber = slideNumber;
-}
+
 
 function changeSlideFooter(slideNumber) {
     if (slideNumber <= 0 || slideNumber >= 8) {
@@ -125,11 +130,10 @@ function createSlideNumberFooter(slideNumber) {
     }
 }
 
-function animateSlide (margin) {
-    
+function animateSlide(margin) {
     document.getElementById("back").animate([
         // keyframes  
-        { transform: 'translateX(-'+ margin + 'px)' }
+        { transform: 'translateX(-' + margin + 'px)' }
     ], {
         // timing options
         duration: 700,

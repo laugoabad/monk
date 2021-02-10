@@ -67,7 +67,7 @@ body {
   user-select: none; }
   .prev img:hover,
   .next img:hover {
-    cursor: grab; }
+    transform: scale(1.2); }
 
 .next img {
   right: 1%; }
@@ -186,6 +186,8 @@ img.icon {
   color: white;
   bottom: 10em;
   left: 2em; }
+  .foot-slide:hover {
+    cursor: pointer; }
   .foot-slide #slides {
     display: flex;
     padding-bottom: 1em;

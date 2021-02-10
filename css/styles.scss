@@ -72,7 +72,7 @@ body {
   border-radius: 0 0.3em 0.3em 0;
   user-select: none;
   &:hover {
-    cursor: grab;
+    transform: scale(1.2);
   }
 }
 .next img {
@@ -204,6 +204,9 @@ img.icon {
   color: white;
   bottom: 10em;
   left: 2em;
+  &:hover {
+    cursor: pointer;
+  }
   #slides {
     display: flex;
     padding-bottom: 1em;
