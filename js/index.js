@@ -18,7 +18,7 @@ function start() {
             pixelsToMove = 810;
         } else {
             if (screen.width <= 425) {
-                pixelsToMove = 800;
+                pixelsToMove = 820;
                 document.getElementById('text').style.margintop = '0px'
             }
         }
@@ -84,14 +84,20 @@ function markFrame(id, prev) {
 
 //******function that changes the slides indicator  */
 function changeFrameSlide(elem) {
+    console.log ('elem', elem.id);
     slideNumber = elem.id;
+    console.log('num', slideNumber);
     if (slideNumber == 0) {
         document.getElementById('prev').style.display = 'none';
         document.getElementById('foot-slide-text').style.display = 'none';
         document.getElementById('story').style.display = "block";
     } else {
         document.getElementById('prev').style.display = 'block';
-
+        animateSlide(slideNumber * pixelsToMove);
+        changeSlideFooter(slideNumber);
+        textAppears(slideNumber, prevSlideNumber);
+        markFrame(slideNumber, prevSlideNumber);
+        createSlideNumberFooter(slideNumber)
     }
     if (slideNumber >= 9) {
         document.getElementById('next').style.display = 'none';
@@ -99,11 +105,7 @@ function changeFrameSlide(elem) {
         document.getElementById('prev').style.display = 'block';
         document.getElementById('next').style.display = 'block'
     }
-    animateSlide(slideNumber * pixelsToMove);
-    changeSlideFooter(slideNumber);
-    textAppears(slideNumber, prevSlideNumber);
-    markFrame(slideNumber, prevSlideNumber);
-    createSlideNumberFooter(slideNumber)
+    
     prevSlideNumber = slideNumber;
 }
 
@@ -124,6 +126,7 @@ function createSlideNumberFooter(slideNumber) {
 }
 
 function animateSlide (margin) {
+    
     document.getElementById("back").animate([
         // keyframes  
         { transform: 'translateX(-'+ margin + 'px)' }
