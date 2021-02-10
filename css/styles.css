@@ -77,7 +77,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  bottom: 15em;
+  bottom: 20em;
   left: 2em; }
   #story div {
     font-size: 1em;
@@ -184,7 +184,7 @@ img.icon {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  bottom: 6em;
+  bottom: 10em;
   left: 2em; }
   .foot-slide #slides {
     display: flex;

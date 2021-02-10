@@ -94,9 +94,10 @@ function changeFrameSlide(elem) {
 
     }
     if (slideNumber >= 9) {
-        document.getElementById('next').style.display = 'none'
+        document.getElementById('next').style.display = 'none';
     } else {
         document.getElementById('prev').style.display = 'block';
+        document.getElementById('next').style.display = 'block'
     }
     animateSlide(slideNumber * pixelsToMove);
     changeSlideFooter(slideNumber);
