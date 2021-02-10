@@ -66,10 +66,6 @@ body {
   position: absolute;
   width: 70%;
   opacity: 0;
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
   animation: fadeIn 1s forwards;
   -moz-animation: fadeIn 1s forwards;
   -webkit-animation: fadeIn 1s forwards;
@@ -80,7 +76,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  bottom: 9em;
+  bottom: 8em;
   left: 2em; }
   #story div {
     font-size: 1em;
@@ -119,7 +115,7 @@ body {
   position: absolute;
   color: white;
   top: 30em;
-  right: 4%;
+  right: 1.4em;
   text-align: right;
   text-decoration: none; }
 
@@ -235,11 +231,7 @@ img.icon {
   .text {
     font-size: 3.4em;
     line-height: 1.1em;
-    width: 40%;
-    right: auto;
-    left: auto;
-    margin-left: 0;
-    margin-right: 0; }
+    width: 40%; }
   .text-1 {
     left: 1.2em; }
   .text-2 {

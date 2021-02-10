@@ -73,11 +73,6 @@ body {
   width: 70%;
   opacity: 0;
 
-  right: 0;
-  left: 0;
-  margin-left: auto;
-  margin-right: auto;
-
   animation: fadeIn 1s forwards;
   -moz-animation: fadeIn 1s forwards;
   -webkit-animation: fadeIn 1s forwards;
@@ -88,7 +83,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: left;
-  bottom: 9em;
+  bottom: 8em;
   left: 2em;
   div {
     font-size: 1em;
@@ -129,7 +124,7 @@ body {
   position: absolute;
   color: white;
   top: 30em;
-  right: 4%;
+  right: 1.4em;
   text-align: right;
   text-decoration: none;
 }
@@ -240,7 +235,7 @@ img.icon {
   .logo {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
+    margin-left: auto; 
     margin-right: 6em;
     div {
       font-size: 2em;
@@ -266,11 +261,6 @@ img.icon {
     font-size: 3.4em;
     line-height: 1.1em;
     width: 40%;
-
-    right: auto;
-    left: auto;
-    margin-left: 0;
-    margin-right: 0;
   }
   .text-1 {
     left: 1.2em;
@@ -279,7 +269,7 @@ img.icon {
     right: 1.5em;
   }
   .foot-slide {
-    flex-direction: row;
+   flex-direction: row;
   }
   #slides {
     padding-bottom: 1em;
@@ -287,6 +277,7 @@ img.icon {
   #foot-slide-text {
     padding-bottom: 1em;
   }
+
 }
 
 @media (min-width: 1024px) {
