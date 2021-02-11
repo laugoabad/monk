@@ -18,8 +18,6 @@ function getPixelsToMove() {
     console.log('get',pixelsToMove, h);
 }
 
-
-
 //****function that slides forwards when click on forwards arrow***//  
 function slideForwards() {
     slideNumber++;
