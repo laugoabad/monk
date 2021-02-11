@@ -11,10 +11,32 @@ function getPixelsToMove() {
     //calculates the pixelsToMove for responsiveness
     if (screen.width <= 600) {
         numberOfFrames = 9
+    }else if (screen.width > 600 && screen.width <= 768) {
+        numberOfFrames = 9.45
     }else{
-        numberOfFrames =9.2
+        numberOfFrames = 9.75
     }
     pixelsToMove = 12226 * h / 1080 / numberOfFrames;
+}
+
+// animates the slider
+function animateSlide(number) {
+    getPixelsToMove();
+    var margin = number * pixelsToMove;
+    if (number == 8) {
+        margin = 7 * pixelsToMove;
+    }
+    console.log('margin', margin);
+
+    document.getElementById("back").animate([
+
+        { transform: 'translateX(-' + margin + 'px)' }
+    ], {
+        // timing options
+        duration: 700,
+        iterations: 1,
+        fill: 'forwards',
+    });
 }
 
 //****function that slides forwards when click on forwards arrow***//  
@@ -95,9 +117,9 @@ function createSlideNumberFooter(slideNumber) {
 function animateSlide(number) {
     getPixelsToMove();
     var margin = number * pixelsToMove;
-    // if (number == 8){
-    //     margin = 7 * pixelsToMove;
-    // }
+    if (number == 8){
+        margin = 7 * pixelsToMove;
+    }
     console.log('margin',margin);
     
     document.getElementById("back").animate([
