@@ -76,6 +76,7 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
+  font-size: 1.1em;
   text-align: left;
   bottom: 25em;
   left: 2em; }
@@ -211,9 +212,6 @@ img.icon {
     animation-delay: 1.9s, 1.7s; }
     #loading-monk .text-monk .young i {
       font-size: 1.3em; }
-
-#foot {
-  display: none; }
 
 #foot-slide {
   display: flex;
