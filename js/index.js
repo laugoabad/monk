@@ -9,13 +9,12 @@ function getPixelsToMove() {
     var rect = div.getBoundingClientRect();
     h = rect.height;
     //calculates the pixelsToMove for responsiveness
-    if (screen.width <= 425) {
+    if (screen.width <= 600) {
         numberOfFrames = 9
     }else{
         numberOfFrames =9.4
     }
     pixelsToMove = 12226 * h / 1080 / numberOfFrames;
-    console.log('get',pixelsToMove, h);
 }
 
 //****function that slides forwards when click on forwards arrow***//  
@@ -27,7 +26,6 @@ function slideForwards() {
     markFrame(slideNumber, prevSlideNumber);
     createSlideNumberFooter(slideNumber)
     prevSlideNumber = slideNumber;
-
 }
 
 //****function that slides backwards when click on backwards arrow***//    
