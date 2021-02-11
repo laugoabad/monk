@@ -12,7 +12,7 @@ function getPixelsToMove() {
     if (screen.width <= 600) {
         numberOfFrames = 9
     }else{
-        numberOfFrames =9.4
+        numberOfFrames =9.2
     }
     pixelsToMove = 12226 * h / 1080 / numberOfFrames;
 }
@@ -112,8 +112,10 @@ function animateSlide(number) {
 }
 
 function start() {
-    window.onload = function () { 
-        document.getElementById("loading-monk").style.display = "none" }
+  
+//     window.onload = function () { 
+//     document.querySelector('#monk img').classList.add('monk'); 
+// }
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
 }

@@ -15,11 +15,11 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  font-family: klavika; }
+  font-family: klavika;
+  background: black; }
 
 .wrapper {
-  position: relative;
-  background: black; }
+  position: relative; }
 
 .sliding-background {
   opacity: 0;
@@ -29,7 +29,7 @@ body {
   transition: all 1s ease-in-out;
   animation-name: fadeIn;
   animation-duration: 2s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation-fill-mode: forwards; }
   .sliding-background img {
     width: auto;
@@ -45,7 +45,7 @@ body {
   text-underline-position: under;
   padding: 0.4em;
   position: absolute;
-  top: 29%;
+  top: 31%;
   width: 70%;
   opacity: 0;
   animation: fadeIn 1s forwards;
@@ -64,7 +64,8 @@ body {
   color: white;
   font-weight: bold;
   border-radius: 0 0.3em 0.3em 0;
-  user-select: none; }
+  user-select: none;
+  z-index: 1; }
   .prev img:hover,
   .next img:hover {
     transform: translateX(5px); }
@@ -95,16 +96,25 @@ body {
   left: 0em; }
 
 .text-1 {
-  left: 1.4em;
-  text-align: left; }
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2em; }
 
 .text-2 {
-  text-align: right;
-  right: 1.8em; }
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2em; }
 
 .text-3 {
-  right: 1.4em;
-  text-align: right; }
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2em; }
 
 .text-4 {
   display: none;
@@ -164,7 +174,7 @@ img.icon {
 .media {
   margin-left: auto; }
 
-#loading-monk .monk img {
+.monk img {
   position: absolute;
   width: 7.6em;
   height: auto;
@@ -174,13 +184,13 @@ img.icon {
   margin-left: auto;
   margin-right: auto;
   animation-name: pop, moveUpDown;
-  animation-duration: 0.8s, 2s;
+  animation-duration: 1s, 3s;
   animation-fill-mode: forwards, forwards;
   animation-timing-function: ease-in-out, ease-in-out;
-  animation-delay: 0s, 0.8s;
+  animation-delay: 0s, 0.5s;
   animation-iteration-count: 1, infinite; }
 
-#loading-monk .text-monk {
+.text-monk {
   display: flex;
   align-items: center;
   position: absolute;
@@ -192,29 +202,29 @@ img.icon {
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-delay: 3s; }
-  #loading-monk .text-monk .patience {
+  .text-monk .patience {
     opacity: 0;
     animation-name: fadeIn, scaleUp, moveLeft;
     animation-duration: 1s, 1s, 0.5s;
     animation-fill-mode: forwards, forwards, forwards;
     animation-timing-function: ease-in-out, ease-in-out, ease-in-out;
     animation-delay: 0.5s, 0.5s, 1.5s; }
-    #loading-monk .text-monk .patience i {
+    .text-monk .patience i {
       font-size: 1.3em; }
-    #loading-monk .text-monk .patience .sign1 {
+    .text-monk .patience .sign1 {
       animation-name: fadeOut;
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
       animation-delay: 1s; }
-      #loading-monk .text-monk .patience .sign1 i {
+      .text-monk .patience .sign1 i {
         font-size: 1.3em; }
-  #loading-monk .text-monk .young {
+  .text-monk .young {
     opacity: 0;
     animation-name: fadeIn, moveRight;
     animation-duration: 1s, 2s;
     animation-fill-mode: forwards, forwards;
     animation-delay: 1.9s, 1.7s; }
-    #loading-monk .text-monk .young i {
+    .text-monk .young i {
       font-size: 1.3em; }
 
 #foot-slide {
@@ -278,14 +288,28 @@ img.icon {
     font-size: 3.4em;
     line-height: 1.1em;
     width: 40%;
-    top: 37%; }
+    top: 39%; }
   .prev img,
   .next img {
     top: 38%; }
   .text-1 {
-    left: 1.2em; }
+    text-align: left;
+    padding: 0 0em;
+    left: 1.6em;
+    margin-right: 0;
+    margin-left: 0; }
   .text-2 {
-    right: 1.5em; }
+    text-align: right;
+    padding: 0 0em;
+    right: 1.6em;
+    margin-right: 0;
+    margin-left: 0; }
+  .text-3 {
+    text-align: right;
+    right: 1.6em;
+    padding: 0 0em;
+    margin-right: 0;
+    margin-left: 0; }
   .text-flex .text-6 {
     font-size: 3.4em; }
   #foot-slide {
@@ -312,8 +336,7 @@ img.icon {
 @media (min-width: 1024px) {
   .text {
     font-size: 4em;
-    width: 35%;
-    top: 36%; }
+    width: 35%; }
   .text-flex .text-6 {
     font-size: 4em; }
   .logo div {
@@ -362,16 +385,18 @@ img.icon {
 
 @keyframes moveUpDown {
   0% {
-    transform: translateY(0px); }
-  0% {
+    transform: translateY(-5px); }
+  10% {
+    transform: translateY(5px); }
+  15% {
     transform: translateY(-5px); }
   30% {
     transform: translateY(10px); }
-  50% {
+  40% {
     transform: translateY(-10px); }
-  70% {
-    transform: translateY(5px); }
-  100% {
+  60% {
+    transform: translateY(10px); }
+  80% {
     transform: translateY(-5px); } }
 
 @keyframes moveLeft {

@@ -17,13 +17,11 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-family: klavika;
-}
-
-.wrapper {
-  position: relative;
   background: black;
 }
-
+.wrapper {
+  position: relative;
+}
 .sliding-background {
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;
@@ -32,7 +30,7 @@ body {
   transition: all 1s ease-in-out;
   animation-name: fadeIn;
   animation-duration: 2s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
   img {
     width: auto;
@@ -50,7 +48,7 @@ body {
   text-underline-position: under;
   padding: 0.4em;
   position: absolute;
-  top: 29%;
+  top: 31%;
   width: 70%;
   opacity: 0;
   animation: fadeIn 1s forwards;
@@ -71,6 +69,7 @@ body {
   font-weight: bold;
   border-radius: 0 0.3em 0.3em 0;
   user-select: none;
+  z-index: 1;
   &:hover {
     transform: translateX(5px);
   }
@@ -103,16 +102,25 @@ body {
 }
 
 .text-1 {
-  left: 1.4em;
-  text-align: left;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2em;
 }
 .text-2 {
-  text-align: right;
-  right: 1.8em;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2em;
 }
 .text-3 {
-  right: 1.4em;
-  text-align: right;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2em;
 }
 
 .text-4 {
@@ -176,66 +184,64 @@ img.icon {
 .media {
   margin-left: auto;
 }
-#loading-monk {
-  .monk img {
-    position: absolute;
-    width: 7.6em;
-    height: auto;
-    top: 40%;
-    right: 0;
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
-    animation-name: pop, moveUpDown;
-    animation-duration: 0.8s, 2s;
-    animation-fill-mode: forwards, forwards;
-    animation-timing-function: ease-in-out, ease-in-out;
-    animation-delay: 0s, 0.8s;
-    animation-iteration-count: 1, infinite;
-    
-  }
 
-  .text-monk {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 61%;
-    left: 48%;
-    color: white;
-    font-family: klavika;
-    animation-name: fadeOut;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
-    .patience {
-      opacity: 0;
-      animation-name: fadeIn, scaleUp, moveLeft;
-      animation-duration: 1s, 1s, 0.5s;
-      animation-fill-mode: forwards, forwards, forwards;
-      animation-timing-function: ease-in-out, ease-in-out, ease-in-out;
-      animation-delay: 0.5s, 0.5s, 1.5s;
+.monk img {
+  position: absolute;
+  width: 7.6em;
+  height: auto;
+  top: 40%;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  animation-name: pop, moveUpDown;
+  animation-duration: 1s, 3s;
+  animation-fill-mode: forwards, forwards;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-delay: 0s, 0.5s;
+  animation-iteration-count: 1, infinite;
+}
+
+.text-monk {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 61%;
+  left: 48%;
+  color: white;
+  font-family: klavika;
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  .patience {
+    opacity: 0;
+    animation-name: fadeIn, scaleUp, moveLeft;
+    animation-duration: 1s, 1s, 0.5s;
+    animation-fill-mode: forwards, forwards, forwards;
+    animation-timing-function: ease-in-out, ease-in-out, ease-in-out;
+    animation-delay: 0.5s, 0.5s, 1.5s;
+    i {
+      font-size: 1.3em;
+    }
+    .sign1 {
+      animation-name: fadeOut;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
       i {
         font-size: 1.3em;
-      }
-      .sign1 {
-        animation-name: fadeOut;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        animation-delay: 1s;
-        i {
-          font-size: 1.3em;
-        }
       }
     }
-    .young {
-      opacity: 0;
-      animation-name: fadeIn, moveRight;
-      animation-duration: 1s, 2s;
-      animation-fill-mode: forwards, forwards;
-      animation-delay: 1.9s, 1.7s;
-      i {
-        font-size: 1.3em;
-      }
+  }
+  .young {
+    opacity: 0;
+    animation-name: fadeIn, moveRight;
+    animation-duration: 1s, 2s;
+    animation-fill-mode: forwards, forwards;
+    animation-delay: 1.9s, 1.7s;
+    i {
+      font-size: 1.3em;
     }
   }
 }
@@ -252,7 +258,7 @@ img.icon {
   bottom: 10em;
   margin-left: auto;
   margin-right: auto;
-  
+
   cursor: pointer;
   #slides {
     display: flex;
@@ -313,18 +319,33 @@ img.icon {
     font-size: 3.4em;
     line-height: 1.1em;
     width: 40%;
-    top: 37%;
- 
+    top: 39%;
   }
+
   .prev img,
   .next img {
     top: 38%;
   }
   .text-1 {
-    left: 1.2em;
+    text-align: left;
+    padding: 0 0em;
+    left: 1.6em;
+    margin-right: 0;
+    margin-left: 0;
   }
   .text-2 {
-    right: 1.5em;
+    text-align: right;
+    padding: 0 0em;
+    right: 1.6em;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .text-3 {
+    text-align: right;
+    right: 1.6em;
+    padding: 0 0em;
+    margin-right: 0;
+    margin-left: 0;
   }
   .text-flex .text-6 {
     font-size: 3.4em;
@@ -361,7 +382,6 @@ img.icon {
   .text {
     font-size: 4em;
     width: 35%;
-    top: 36%;
   }
   .text-flex .text-6 {
     font-size: 4em;
@@ -434,22 +454,26 @@ img.icon {
 
 @keyframes moveUpDown {
   0% {
-    transform: translateY(0px);
-  }
-  0% {
     transform: translateY(-5px);
   }
-
-  30% {
-    transform: translateY(10px);
+  10% {
+    transform: translateY(+5px);
   }
-  50% {
+  15% {
+    transform: translateY(-5px);
+  }
+  
+  30% {
+    transform: translateY(+10px);
+  }
+
+  40% {
     transform: translateY(-10px);
   }
-  70% {
-    transform: translateY(5px);
+  60% {
+    transform: translateY(+10px);
   }
-  100% {
+  80% {
     transform: translateY(-5px);
   }
 }
