@@ -1,14 +1,13 @@
 
 var slideNumber = 0;
 var prevSlideNumber = 0;
-var pixelsToMove = 0;
-
+var pixelsToMove = 900;
 
 //****function that slides forwards when click on forwards arrow***//  
 function slideForwards() {
     slideNumber++;
     textAppears(slideNumber, prevSlideNumber);
-    animateSlide(slideNumber * pixelsToMove);
+    animateSlide(slideNumber);
     //marks with white square the current frame
     markFrame(slideNumber, prevSlideNumber);
     createSlideNumberFooter(slideNumber)
@@ -22,7 +21,7 @@ function slideBackwards() {
     slideNumber--
     //****stops the slide when you reach the slide start*****/
     document.getElementById('back').style.marginLeft = 0 + 'px';
-    animateSlide(slideNumber * pixelsToMove);
+    animateSlide(slideNumber);
     textAppears(slideNumber, prevSlideNumber);
     //marks with white square the current frame
     markFrame(slideNumber, prevSlideNumber);
@@ -34,7 +33,7 @@ function slideBackwards() {
 //******function that slides by clicking on the slide indicator  */
 function changeFrameSlide(elem) {
     slideNumber = elem.id;
-    animateSlide(slideNumber * pixelsToMove);
+    animateSlide(slideNumber);
     textAppears(slideNumber, prevSlideNumber);
     markFrame(slideNumber, prevSlideNumber);
     createSlideNumberFooter(slideNumber);
@@ -80,7 +79,12 @@ function createSlideNumberFooter(slideNumber) {
     }
 }
  // animates the slider
-function animateSlide(margin) {
+function animateSlide(number) {
+    var margin = number * pixelsToMove;
+    if (number == 8){
+        margin = 7 * pixelsToMove
+    }
+ 
     document.getElementById("back").animate([
         // keyframes  
         { transform: 'translateX(-' + margin + 'px)' }
@@ -96,20 +100,4 @@ function start() {
     window.onload = function () { document.getElementById("loading-monk").style.display = "none" }
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
-
-    //decides the lenght to be slide in each frame dependending on the screen width
-    if (screen.width >=1440) {
-        pixelsToMove = 880
-    }else if (screen.width > 1024 && screen.width < 1440)  {
-        pixelsToMove = 830
-    } else {
-        if (screen.width <= 1024 && screen.width > 425) {
-            pixelsToMove = 820;
-        } else {
-            if (screen.width <= 425) {
-                pixelsToMove = 840;
-                document.getElementById('text').style.margintop = '0px'
-            }
-        }
-    }
 }

@@ -84,8 +84,8 @@ body {
   flex-direction: column;
   font-size: 1.1em;
   text-align: left;
-  bottom: 25em;
-  left: 2em;
+  bottom: 20em;
+  margin-left: 2em;
   div {
     font-size: 1.1em;
     color: white;
@@ -119,7 +119,7 @@ body {
   line-height: 1.3em;
   padding: 0.4em;
   position: absolute;
-  top: 0 ;
+  top: 0;
   right: 1.4em;
   text-align: right;
   width: 70%;
@@ -128,7 +128,7 @@ body {
   -moz-animation: fadeIn 1s forwards;
   -webkit-animation: fadeIn 1s forwards;
   -o-animation: fadeIn 1s forwards;
-  }
+}
 .text-5 {
   color: white;
   text-align: right;
@@ -177,7 +177,7 @@ img.icon {
     position: absolute;
     width: 7.6em;
     height: auto;
-    top: 35%;
+    top: 40%;
     right: 0;
     left: 0;
     margin-left: auto;
@@ -238,17 +238,21 @@ img.icon {
 #foot-slide {
   display: flex;
   flex-direction: column;
+  align-items: baseline;
   position: absolute;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   bottom: 10em;
-  left: 2em;
-  &:hover {
-    cursor: pointer;
-  }
+  // left: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
   #slides {
     display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 1em;
     opacity: 0.6;
     .slide {
@@ -265,7 +269,9 @@ img.icon {
   }
 
   #foot-slide-text {
-    margin-left: 3em;
+    margin-left: auto;
+    margin-right: auto;
+
     font-size: 1em;
     color: white;
     opacity: 0.6;
@@ -275,7 +281,7 @@ img.icon {
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    margin-right: 6em;
+    margin-right: auto;
     div {
       font-size: 2em;
       color: white;
@@ -301,6 +307,7 @@ img.icon {
     line-height: 1.1em;
     width: 40%;
     top: 37%;
+ 
   }
   .prev img,
   .next img {
@@ -317,13 +324,20 @@ img.icon {
   }
   #foot-slide {
     flex-direction: row;
-    align-items: flex-end;
     bottom: 2em;
     #slides {
+      margin-right: 2em;
+      margin-left: 2em;
       padding-bottom: 1em;
     }
     #foot-slide-text {
+      margin-right: auto;
+      margin-left: 0;
       padding-bottom: 1em;
+    }
+    .logo {
+      margin-left: auto;
+      margin-right: 6em;
     }
   }
 
