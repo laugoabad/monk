@@ -2,15 +2,19 @@
 var slideNumber = 0;
 var prevSlideNumber = 0;
 var pixelsToMove = 0;
-
-
+//calculates the width of the background image after it resizes to fit the screen heigth, ten I divide that number in the amount of frames that I want
 function getPixelsToMove() {
-
+    var numberOfFrames = 0;
     var div = document.getElementById("back");
     var rect = div.getBoundingClientRect();
     h = rect.height;
-   
-    pixelsToMove = 12226 * h / 1080 / 9.75;
+    //calculates the pixelsToMove for responsiveness
+    if (screen.width <= 425) {
+        numberOfFrames = 9
+    }else{
+        numberOfFrames =9.4
+    }
+    pixelsToMove = 12226 * h / 1080 / numberOfFrames;
     console.log('get',pixelsToMove, h);
 }
 
