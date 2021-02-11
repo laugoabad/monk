@@ -80,7 +80,8 @@ body {
 }
 #story {
   position: absolute;
-  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
   font-size: 1.1em;
   text-align: left;
@@ -146,6 +147,7 @@ body {
 }
 .text-flex {
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
   justify-content: right;
   .text-6 {
@@ -237,6 +239,7 @@ img.icon {
 
 #foot-slide {
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
   align-items: baseline;
   position: absolute;
@@ -279,6 +282,7 @@ img.icon {
   }
   .logo {
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
@@ -323,6 +327,7 @@ img.icon {
     font-size: 3.4em;
   }
   #foot-slide {
+    -webkit-flex-direction: row;
     flex-direction: row;
     bottom: 2em;
     #slides {
