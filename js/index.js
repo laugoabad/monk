@@ -52,7 +52,7 @@ function textAppears(textNumber, prevTextNumber) {
         document.getElementById('prev').style.display = 'none';
         document.getElementById('text-0').style.display = 'block';
         document.getElementById('story').style.display = "block";
-        document.getElementById('foot').style.display = "block";
+       
 
     } else if (textNumber == 9) {
         document.getElementById('foot-slide-text').style.display = 'none';
