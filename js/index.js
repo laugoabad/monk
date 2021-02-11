@@ -1,7 +1,20 @@
 
 var slideNumber = 0;
 var prevSlideNumber = 0;
-var pixelsToMove = 900;
+var pixelsToMove = 0;
+
+
+function getPixelsToMove() {
+
+    var div = document.getElementById("back");
+    var rect = div.getBoundingClientRect();
+    h = rect.height;
+   
+    pixelsToMove = 12226 * h / 1080 / 9.75;
+    console.log('get',pixelsToMove, h);
+}
+
+
 
 //****function that slides forwards when click on forwards arrow***//  
 function slideForwards() {
@@ -80,13 +93,15 @@ function createSlideNumberFooter(slideNumber) {
 }
  // animates the slider
 function animateSlide(number) {
+    getPixelsToMove();
     var margin = number * pixelsToMove;
-    if (number == 8){
-        margin = 7 * pixelsToMove
-    }
- 
+    // if (number == 8){
+    //     margin = 7 * pixelsToMove;
+    // }
+    console.log('margin',margin);
+    
     document.getElementById("back").animate([
-        // keyframes  
+        
         { transform: 'translateX(-' + margin + 'px)' }
     ], {
         // timing options
@@ -97,7 +112,8 @@ function animateSlide(number) {
 }
 
 function start() {
-    window.onload = function () { document.getElementById("loading-monk").style.display = "none" }
+    window.onload = function () { 
+        document.getElementById("loading-monk").style.display = "none" }
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
 }
