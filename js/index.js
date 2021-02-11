@@ -52,7 +52,6 @@ function textAppears(textNumber, prevTextNumber) {
         document.getElementById('prev').style.display = 'none';
         document.getElementById('text-0').style.display = 'block';
         document.getElementById('story').style.display = "block";
-       
 
     } else if (textNumber == 9) {
         document.getElementById('foot-slide-text').style.display = 'none';
@@ -67,6 +66,7 @@ function textAppears(textNumber, prevTextNumber) {
         document.getElementById('prev').style.display = 'block';
     }
 }
+
 
 //******function that changes the white marks in the frame list */
 function markFrame(id, prev) {
@@ -96,6 +96,7 @@ function start() {
     window.onload = function () { document.getElementById("loading-monk").style.display = "none" }
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
+
     //decides the lenght to be slide in each frame dependending on the screen width
     if (screen.width >=1440) {
         pixelsToMove = 880

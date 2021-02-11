@@ -176,7 +176,7 @@ img.icon {
     position: absolute;
     width: 7.6em;
     height: auto;
-    top: 40%;
+    top: 35%;
     right: 0;
     left: 0;
     margin-left: auto;
@@ -233,11 +233,8 @@ img.icon {
     }
   }
 }
-#foot {
-  display: none;
-}
 
-.foot-slide {
+#foot-slide {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -317,7 +314,7 @@ img.icon {
   .text-flex .text-6 {
     font-size: 3.4em;
   }
-  .foot-slide {
+  #foot-slide {
     flex-direction: row;
     align-items: flex-end;
     bottom: 2em;

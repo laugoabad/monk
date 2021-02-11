@@ -163,7 +163,7 @@ img.icon {
   position: absolute;
   width: 7.6em;
   height: auto;
-  top: 40%;
+  top: 35%;
   right: 0;
   left: 0;
   margin-left: auto;
@@ -212,10 +212,7 @@ img.icon {
     #loading-monk .text-monk .young i {
       font-size: 1.3em; }
 
-#foot {
-  display: none; }
-
-.foot-slide {
+#foot-slide {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -224,37 +221,37 @@ img.icon {
   color: white;
   bottom: 10em;
   left: 2em; }
-  .foot-slide:hover {
+  #foot-slide:hover {
     cursor: pointer; }
-  .foot-slide #slides {
+  #foot-slide #slides {
     display: flex;
     padding-bottom: 1em;
     opacity: 0.6; }
-    .foot-slide #slides .slide {
+    #foot-slide #slides .slide {
       font-size: 0.9em;
       border-style: dotted none dotted dotted;
       border-color: white;
       padding: 0.2em 1em; }
-    .foot-slide #slides .slide-end {
+    #foot-slide #slides .slide-end {
       font-size: 0.9em;
       border-style: dotted dotted dotted dotted;
       border-color: white; }
-  .foot-slide #foot-slide-text {
+  #foot-slide #foot-slide-text {
     margin-left: 3em;
     font-size: 1em;
     color: white;
     opacity: 0.6;
     padding-bottom: 1em; }
-  .foot-slide .logo {
+  #foot-slide .logo {
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: 6em; }
-    .foot-slide .logo div {
+    #foot-slide .logo div {
       font-size: 2em;
       color: white;
       line-height: 1em; }
-    .foot-slide .logo .media {
+    #foot-slide .logo .media {
       letter-spacing: 0.1em; }
 
 .square {
@@ -279,13 +276,13 @@ img.icon {
     right: 1.5em; }
   .text-flex .text-6 {
     font-size: 3.4em; }
-  .foot-slide {
+  #foot-slide {
     flex-direction: row;
     align-items: flex-end;
     bottom: 2em; }
-    .foot-slide #slides {
+    #foot-slide #slides {
       padding-bottom: 1em; }
-    .foot-slide #foot-slide-text {
+    #foot-slide #foot-slide-text {
       padding-bottom: 1em; }
   #story {
     bottom: 10em; } }
