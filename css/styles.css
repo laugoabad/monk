@@ -212,6 +212,9 @@ img.icon {
     #loading-monk .text-monk .young i {
       font-size: 1.3em; }
 
+#foot {
+  display: none; }
+
 #foot-slide {
   display: flex;
   flex-direction: column;
