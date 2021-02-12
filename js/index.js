@@ -3,21 +3,13 @@ var slideNumber = 0;
 var prevSlideNumber = 0;
 var pixelsToMove = 0;
 
-window.onload = function() {
+function init() {
     document.querySelector('#monk').classList.add('monk');
     document.querySelector('#text-monk').classList.add('text-monk');
     document.getElementById('smoke').classList.add('smoke');
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
 }
-
-// function start() {
-//     document.querySelector('#monk').classList.add('monk');
-//     document.querySelector('#text-monk').classList.add('text-monk');
-//     document.getElementById('smoke').classList.add('smoke');
-//     document.getElementById('0').classList.add('square');
-//     textAppears(slideNumber, prevSlideNumber);
-// }
 //calculates the width of the background image after it resizes to fit the screen heigth, ten I divide that number in the amount of frames that I want
 function getPixelsToMove() {
     var numberOfFrames = 0;
