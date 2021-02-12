@@ -75,11 +75,7 @@ body {
 
 #story {
   position: absolute;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   font-size: 1.1em;
@@ -152,10 +148,6 @@ body {
 
 .text-flex {
   display: flex;
-  display: -webkit-flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;
   -webkit-flex-direction: column;
   flex-direction: column;
   justify-content: right; }
@@ -176,10 +168,6 @@ img.icon {
 
 .media-container {
   display: flex;
-  display: -webkit-flex;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;
   align-items: center;
   margin-top: 1.6em; }
 
@@ -204,7 +192,6 @@ img.icon {
 
 .text-monk {
   display: flex;
-  display: -webkit-flex;
   align-items: center;
   position: absolute;
   top: 61%;
@@ -242,7 +229,6 @@ img.icon {
 
 #foot-slide {
   display: flex;
-  display: -webkit-flex;
   -webkit-flex-direction: column;
   flex-direction: column;
   align-items: baseline;
@@ -256,7 +242,6 @@ img.icon {
   cursor: pointer; }
   #foot-slide #slides {
     display: flex;
-    display: -webkit-flex;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
@@ -280,9 +265,6 @@ img.icon {
     padding-bottom: 1em; }
   #foot-slide .logo {
     display: flex;
-    display: -webkit-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     -webkit-flex-direction: column;
     flex-direction: column;
     margin-left: auto;
