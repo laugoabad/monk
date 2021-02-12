@@ -181,8 +181,8 @@ img.icon {
 .monk img {
   position: absolute;
   opacity: 0;
-  left: 10em;
-  top: 26em;
+  left: 40%;
+  top: 40%;
   width: 8em;
   height: auto;
   -webkit-animation-name: fadeIn, pop, moveUpDown;
@@ -223,8 +223,8 @@ img.icon {
 
 .text-monk {
   position: absolute;
-  top: 42em;
-  left: 10em;
+  top: 60%;
+  left: 40%;
   color: white;
   font-family: klavika; }
   .text-monk .patience {
@@ -338,9 +338,12 @@ img.icon {
 
 /*----MEDIA QUERYS------------------------------------------------------------------*/
 @media (min-width: 768px) {
-  .monk img,
+  .monk img {
+    top: 35%;
+    left: 48%; }
   .text-monk {
-    left: 44%; }
+    top: 60%;
+    left: 48%; }
   .text {
     font-size: 3.4em;
     line-height: 1.1em;
@@ -398,6 +401,8 @@ img.icon {
     font-size: 2.8em; } }
 
 @media (min-width: 1440px) {
+  .text-monk {
+    top: 56%; }
   .text {
     font-size: 4.6em;
     width: 30%; }
