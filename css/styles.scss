@@ -285,10 +285,6 @@ img.icon {
   }
   .young {
     opacity: 0;
-    animation-name: fadeIn, moveRight;
-    animation-duration: 1s, 2s;
-    animation-fill-mode: forwards, forwards;
-    animation-delay: 1.9s, 1.7s;
     -webkit-animation-name: fadeIn, moveRight;
     -moz-animation-name: fadeIn, moveRight;
     -o-animation-name: fadeIn, moveRight;
@@ -300,10 +296,10 @@ img.icon {
     -webkit-animation-fill-mode: forwards, forwards;
     -o-animation-fill-mode: forwards, forwards;
     animation-fill-mode: forwards, forwards;
-    -webkit-animation-delay: 1.9s, 1.7s;
-    -moz-animation-delay: 1.9s, 1.7s;
-    -o-animation-delay: 1.9s, 1.7s;
-    animation-delay: 1.9s, 1.7s;
+    -webkit-animation-delay: 1.7s, 1.7s;
+    -moz-animation-delay: 1.7s, 1.7s;
+    -o-animation-delay: 1.7s, 1.7s;
+    animation-delay: 1.7s, 1.7s;
     i {
       font-size: 1.3em;
     }
