@@ -345,7 +345,8 @@ img.icon {
 
 /*----MEDIA QUERYS------------------------------------------------------------------*/
 @media (min-width: 768px) {
-  .monk img, .text-monk {
+  .monk img,
+  .text-monk {
     left: 44%; }
   .text {
     font-size: 3.4em;
