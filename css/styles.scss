@@ -250,6 +250,7 @@ img.icon {
   color: white;
   font-family: klavika;
   .patience {
+     white-space: nowrap ;
     position: absolute;
     opacity: 0;
     -webkit-animation-name: fadeIn, scaleUp, moveLeft;
@@ -624,10 +625,10 @@ img.icon {
     transform: translateX(-3em);
   }
   100% {
-    -webkit-transform: translateX(3em);
-    -moz-transform: translateX(31em);
-    -ms-transform: translateX(31em);
-    -o-transform: translateX(3em);
-    transform: translateX(3em);
+    -webkit-transform: translateX(0.5em);
+    -moz-transform: translateX(0.5em);
+    -ms-transform: translateX(0.5em);
+    -o-transform: translateX(0.5em);
+    transform: translateX(0.5em);
   }
 }
