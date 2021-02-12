@@ -134,10 +134,9 @@ function animateSlide(number) {
 }
 
 function start() {
-  
-//     window.onload = function () { 
-//     document.querySelector('#monk img').classList.add('monk'); 
-// }
+    window.onload = function () { 
+    document.querySelector('#monk img').classList.add('monk'); 
+}
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
 }
