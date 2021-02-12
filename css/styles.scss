@@ -19,6 +19,13 @@ body {
   font-family: klavika;
   background: black;
 }
+.test {
+  animation: fadeIn 1s 3s forwards;
+  -moz-animation: fadeIn 1s 3s forwards;
+  -webkit-animation: fadeIn 1s 3s forwards;
+  -o-animation: fadeIn 1s 3s forwards;
+}
+
 .wrapper {
   position: relative;
 }
@@ -29,19 +36,7 @@ body {
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  -o-animation-delay: 6s;
-  animation-delay: 6s;
-  animation-fill-mode: forwards;
+
   img {
     width: auto;
     height: 100vh;
@@ -209,17 +204,17 @@ img.icon {
   -moz-animation-name: fadeIn, pop, moveUpDown;
   -o-animation-name: fadeIn, pop, moveUpDown;
   animation-name: fadeIn, pop, moveUpDown;
-  -webkit-animation-duration: 0.3s, 1.8s, 4s;
-  -moz-animation-duration: 0.3s, 1.8s, 4s;
-  -o-animation-duration: 0.3s, 1.8s, 4s;
-  animation-duration: 0.3s, 1.8s, 4s;
+  -webkit-animation-duration: 0.5s, 0.9s, 4s;
+  -moz-animation-duration: 0.5s, 0.9, 4s;
+  -o-animation-duration: 0.5s, 0.9s, 4s;
+  animation-duration: 0.5s, 0.9s, 4s;
   -webkit-animation-fill-mode: forwards, forwards, forwards;
   -o-animation-fill-mode: forwards, forwards, forwards;
   animation-fill-mode: forwards, forwards, forwards;
-  -webkit-animation-timing-function: linear, ease-in-out, ease-in-out;
-  -moz-animation-timing-function: linear, ease-in-out, ease-in-out;
-  -o-animation-timing-function: linear, ease-in-out, ease-in-out;
-  animation-timing-function: linear, ease-in-out, ease-in-out;
+  -webkit-animation-timing-function: linear, linear, ease-in-out;
+  -moz-animation-timing-function: linear, linear, ease-in-out;
+  -o-animation-timing-function: linear, linear, ease-in-out;
+  animation-timing-function: linear, linear, ease-in-out;
   -webkit-animation-delay: 0s, 0s, 0.5;
   -moz-animation-delay: 0s, 0s, 0.5;
   -o-animation-delay: 0s, 0s, 0.5;
@@ -250,17 +245,16 @@ img.icon {
   color: white;
   font-family: klavika;
   .patience {
-     white-space: nowrap ;
     position: absolute;
     opacity: 0;
     -webkit-animation-name: fadeIn, scaleUp, moveLeft;
     -moz-animation-name: fadeIn, scaleUp, moveLeft;
     -o-animation-name: fadeIn, scaleUp, moveLeft;
     animation-name: fadeIn, scaleUp, moveLeft;
-    -webkit-animation-duration: 0.1s, 1s, 0.5s;
-    -moz-animation-duration: 0.1s, 1s, 0.5s;
-    -o-animation-duration: 0.1s, 1s, 0.5s;
-    animation-duration: 0.1s, 1s, 0.5s;
+    -webkit-animation-duration: 0.1s, 0.8s, 0.5s;
+    -moz-animation-duration: 0.1s, 0.8s, 0.5s;
+    -o-animation-duration: 0.1s, 0.8s, 0.5s;
+    animation-duration: 0.1s, 0.8s, 0.5s;
     -webkit-animation-fill-mode: forwards, forwards, forwards;
     -o-animation-fill-mode: forwards, forwards, forwards;
     animation-fill-mode: forwards, forwards, forwards;
@@ -268,42 +262,43 @@ img.icon {
     -moz-animation-timing-function: ease-in-out, ease-in-out, linear;
     -o-animation-timing-function: ease-in-out, ease-in-out, linear;
     animation-timing-function: ease-in-out, ease-in-out, linear;
-    -webkit-animation-delay: 0.5s, 0.5s, 1.5s;
-    -moz-animation-delay: 0.5s, 0.5s, 1.5s;
-    -o-animation-delay: 0.5s, 0.5s, 1.5s;
-    animation-delay: 0.5s, 0.5s, 1.5s;
+    -webkit-animation-delay: 0.5s, 0.5s, 1.4s;
+    -moz-animation-delay: 0.5s, 0.5s, 1.4s;
+    -o-animation-delay: 0.5s, 0.5s, 1.4s;
+    animation-delay: 0.5s, 0.5s, 1.4s;
     i {
       font-size: 1.3em;
     }
   }
-    .sign1 {
-      position: absolute;
-      animation: fadeOut 0.5s 1s forwards;
-      -moz-animation: fadeOut 0.5s 1s forwards;
-      -webkit-animation: fadeOut 0.5s 1s forwards;
-      -o-animation: fadeOut 0.5s 1s forwards;
-      i {
-        font-size: 1.4em;
-      }
+  .sign1 {
+    position: absolute;
+    animation: fadeOut 0.5s 0.5s forwards;
+    -moz-animation: fadeOut 0.5s 0.5s forwards;
+    -webkit-animation: fadeOut 0.5s 0.5s forwards;
+    -o-animation: fadeOut 0.5s 0.5s forwards;
+    i {
+      font-size: 1.4em;
     }
+  }
   .young {
     position: absolute;
+     white-space: nowrap;
     opacity: 0;
     -webkit-animation-name: fadeIn, moveRight;
     -moz-animation-name: fadeIn, moveRight;
     -o-animation-name: fadeIn, moveRight;
     animation-name: fadeIn, moveRight;
-    -webkit-animation-duration: 1s, 2s;
-    -moz-animation-duration: 1s, 2s;
-    -o-animation-duration: 1s, 2s;
-    animation-duration: 1s, 2s;
+    -webkit-animation-duration: 0.6s, 0.1s;
+    -moz-animation-duration: 0.6s, 0.1;
+    -o-animation-duration: 0.6s, 0.1s;
+    animation-duration: 0.6s, 0.1s;
     -webkit-animation-fill-mode: forwards, forwards;
     -o-animation-fill-mode: forwards, forwards;
     animation-fill-mode: forwards, forwards;
-    -webkit-animation-delay: 1.7s, 1.7s;
-    -moz-animation-delay: 1.7s, 1.7s;
-    -o-animation-delay: 1.7s, 1.7s;
-    animation-delay: 1.7s, 1.7s;
+    -webkit-animation-delay: 1.5s, 1.6s;
+    -moz-animation-delay: 1.5s, 1.6s;
+    -o-animation-delay: 1.5s, 1.6s;
+    animation-delay: 1.5s, 1.6s;
     i {
       font-size: 1.3em;
     }
@@ -491,14 +486,15 @@ img.icon {
 }
 
 @keyframes pop {
-  from {
+  0% {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -o-transform: scale(0);
     transform: scale(0);
   }
-  to {
+ 
+   100% {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -600,15 +596,15 @@ img.icon {
 }
 
 @keyframes moveLeft {
-  0%  {
+  0% {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
   }
-  100%  {
-      -webkit-transform: translateX(-2em);
+  100% {
+    -webkit-transform: translateX(-2em);
     -moz-transform: translateX(-2em);
     -ms-transform: translateX(-2em);
     -o-transform: translateX(-2em);
@@ -618,17 +614,17 @@ img.icon {
 
 @keyframes moveRight {
   0% {
-    -webkit-transform: translateX(-3em);
-    -moz-transform: translateX(-3em);
-    -ms-transform: translateX(-3em);
-    -o-transform: translateX(-3em);
-    transform: translateX(-3em);
+    -webkit-transform: translateX(-6em);
+    -moz-transform: translateX(-6em);
+    -ms-transform: translateX(-6em);
+    -o-transform: translateX(-6em);
+    transform: translateX(-6em);
   }
   100% {
-    -webkit-transform: translateX(0.5em);
-    -moz-transform: translateX(0.5em);
-    -ms-transform: translateX(0.5em);
-    -o-transform: translateX(0.5em);
-    transform: translateX(0.5em);
+    -webkit-transform: translateX(3em);
+    -moz-transform: translateX(3em);
+    -ms-transform: translateX(3em);
+    -o-transform: translateX(3em);
+    transform: translateX(3em);
   }
 }

@@ -9,20 +9,19 @@
     <!-- <link rel="stylesheet" type="text/css" href="css/animations.css"> -->
 </head>
 
-<body onload="init()">
+<body id="body" onload="init()">
     <div id="wrapper">
         <div id="loading-monk">
-            <div id="smoke">
+            <div id="smoke" class="smoke">
             <iframe src="https://giphy.com/embed/ftfVpeWsm95QgGfOZ8" width="480" height="480" frameBorder="0" class="giphy-embed"
                 allowFullScreen></iframe>
             </div>
             <!-- <p><a href="https://giphy.com/gifs/desktoppaints-smoke-puff-smog-ftfVpeWsm95QgGfOZ8">via GIPHY</a></p> -->
-            <div id="monk">
+            <div id="monk" class="monk">
                 <img src="./assets/images/monk.png" alt="monk">
             </div>
-            <div id="text-monk">
-                <span class="patience"><i>Patience</i><span class="sign1">!</span><span class="young"><i>,young padawan...</i></span></span>
-            </div>
+            <div id="text-monk" class="text-monk">
+                <span class="patience"><i>Patience</i><span class="sign1">!</span></span><span class="young"><i>,young padawan...</i></span>            </div>
         </div>
         <div id="sliding-background" class="sliding-background">
             <img id="back" src="./assets/images/background.jpg" alt="">

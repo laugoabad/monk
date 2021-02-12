@@ -4,11 +4,15 @@ var prevSlideNumber = 0;
 var pixelsToMove = 0;
 
 function init() {
-    document.querySelector('#monk').classList.add('monk');
-    document.querySelector('#text-monk').classList.add('text-monk');
-    document.getElementById('smoke').classList.add('smoke');
+    setTimeout(delayStart,200)
+    
+
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
+}
+
+function delayStart() {
+    document.getElementById('sliding-background').classList.add('test');
 }
 //calculates the width of the background image after it resizes to fit the screen heigth, ten I divide that number in the amount of frames that I want
 function getPixelsToMove() {
