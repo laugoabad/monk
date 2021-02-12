@@ -295,9 +295,9 @@ img.icon {
   #foot-slide #slides {
     display: flex;
     align-items: center;
+    align-self: flex-end;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 1em;
     opacity: 0.6; }
     #foot-slide #slides .slide {
       font-size: 0.9em;
@@ -311,13 +311,15 @@ img.icon {
   #foot-slide #foot-slide-text {
     margin-left: auto;
     margin-right: auto;
+    align-self: flex-end;
     font-size: 1em;
     color: white;
     opacity: 0.6;
-    padding-bottom: 1em; }
+    margin-top: 1em; }
   #foot-slide .logo {
     display: flex;
     flex-direction: column;
+    margin-top: 2em;
     margin-left: auto;
     margin-right: auto; }
     #foot-slide .logo div {
@@ -365,16 +367,15 @@ img.icon {
     font-size: 3.4em; }
   #foot-slide {
     flex-direction: row;
-    bottom: 2em; }
+    bottom: 3em; }
     #foot-slide #slides {
       margin-right: 2em;
-      margin-left: 2em;
-      padding-bottom: 1em; }
+      margin-left: 2em; }
     #foot-slide #foot-slide-text {
       margin-right: auto;
-      margin-left: 0;
-      padding-bottom: 1em; }
+      margin-left: 0; }
     #foot-slide .logo {
+      margin-top: 0;
       margin-left: auto;
       margin-right: 6em; }
   #story {

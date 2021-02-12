@@ -311,14 +311,14 @@ img.icon {
   bottom: 10em;
   margin-left: auto;
   margin-right: auto;
-
   cursor: pointer;
+
   #slides {
     display: flex;
     align-items: center;
+    align-self: flex-end;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 1em;
     opacity: 0.6;
     .slide {
       font-size: 0.9em;
@@ -336,15 +336,16 @@ img.icon {
   #foot-slide-text {
     margin-left: auto;
     margin-right: auto;
-
+    align-self: flex-end;
     font-size: 1em;
     color: white;
     opacity: 0.6;
-    padding-bottom: 1em;
+    margin-top: 1em;
   }
   .logo {
     display: flex;
     flex-direction: column;
+    margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
     div {
@@ -404,18 +405,17 @@ img.icon {
   }
   #foot-slide {
     flex-direction: row;
-    bottom: 2em;
+    bottom: 3em;
     #slides {
       margin-right: 2em;
       margin-left: 2em;
-      padding-bottom: 1em;
     }
     #foot-slide-text {
       margin-right: auto;
       margin-left: 0;
-      padding-bottom: 1em;
     }
     .logo {
+      margin-top: 0;
       margin-left: auto;
       margin-right: 6em;
     }
