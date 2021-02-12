@@ -11,9 +11,9 @@ function getPixelsToMove() {
     //calculates the pixelsToMove for responsiveness
     if (screen.width <= 600) {
         numberOfFrames = 9
-    }else if (screen.width > 600 && screen.width <= 768) {
+    } else if (screen.width > 600 && screen.width <= 768) {
         numberOfFrames = 9.45
-    }else{
+    } else {
         numberOfFrames = 9.75
     }
     pixelsToMove = 12226 * h / 1080 / numberOfFrames;
@@ -74,11 +74,11 @@ function changeFrameSlide(elem) {
     createSlideNumberFooter(slideNumber);
     prevSlideNumber = slideNumber;
 }
- //Chooses the elements to be shwon as the slides passes
+//Chooses the elements to be shwon as the slides passes
 function textAppears(textNumber, prevTextNumber) {
     document.getElementById('text-' + prevTextNumber).style.display = 'none';
     document.getElementById('text-' + textNumber).style.display = 'block';
-    
+
     if (textNumber == 0) {
         document.getElementById('foot-slide-text').style.display = 'none';
         document.getElementById('0').classList.add('square');
@@ -113,17 +113,17 @@ function createSlideNumberFooter(slideNumber) {
         document.getElementById('path').innerHTML = slideNumber;
     }
 }
- // animates the slider
+// animates the slider
 function animateSlide(number) {
     getPixelsToMove();
     var margin = number * pixelsToMove;
-    if (number == 8){
+    if (number == 8) {
         margin = 7 * pixelsToMove;
     }
-    console.log('margin',margin);
-    
+    console.log('margin', margin);
+
     document.getElementById("back").animate([
-        
+
         { transform: 'translateX(-' + margin + 'px)' }
     ], {
         // timing options
@@ -134,9 +134,9 @@ function animateSlide(number) {
 }
 
 function start() {
-    window.onload = function () { 
-    document.querySelector('#monk img').classList.add('monk'); 
-}
+    document.querySelector('#monk').classList.add('monk');
+    document.querySelector('#text-monk').classList.add('text-monk');
+    document.getElementById('smoke').classList.add('smoke');
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
 }
