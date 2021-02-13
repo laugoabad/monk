@@ -4,9 +4,8 @@ var prevSlideNumber = 0;
 var pixelsToMove = 0;
 
 function init() {
+    //the setTimeout is set so that you can see the animation while loading, then it should be removed
     setTimeout(delayStart,200)
-    
-
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
 }
@@ -38,10 +37,7 @@ function animateSlide(number) {
     if (number == 8) {
         margin = 7 * pixelsToMove;
     }
-    console.log('margin', margin);
-
     document.getElementById("back").animate([
-
         { transform: 'translateX(-' + margin + 'px)' }
     ], {
         // timing options
