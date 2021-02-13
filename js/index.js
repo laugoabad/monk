@@ -128,11 +128,41 @@ function animateSlide(number) {
     if (number == 8) {
         margin = 7 * pixelsToMove;
     }
-    console.log('margin', margin);
 
     document.getElementById("back").animate([
-
         { transform: 'translateX(-' + margin + 'px)' }
+    ], {
+        // timing options
+        duration: 700,
+        iterations: 1,
+        fill: 'forwards',
+    });
+    document.getElementById("back").animate([
+        { webkitTransform: 'translateX(-' + margin + 'px)' }
+    ], {
+        // timing options
+        duration: 700,
+        iterations: 1,
+        fill: 'forwards',
+    });
+    document.getElementById("back").animate([
+        { MozTransform: 'translateX(-' + margin + 'px)' }
+    ], {
+        // timing options
+        duration: 700,
+        iterations: 1,
+        fill: 'forwards',
+    });
+    document.getElementById("back").animate([
+        { msTransform: 'translateX(-' + margin + 'px)' }
+    ], {
+        // timing options
+        duration: 700,
+        iterations: 1,
+        fill: 'forwards',
+    });
+    document.getElementById("back").animate([
+        { Otransform: 'translateX(-' + margin + 'px)' }
     ], {
         // timing options
         duration: 700,
