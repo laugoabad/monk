@@ -182,7 +182,7 @@ img.icon {
   position: absolute;
   opacity: 0;
   left: 35%;
-  top: 40%;
+  top: 35%;
   width: 8em;
   height: auto;
   -webkit-animation-name: fadeIn, pop, moveUpDown;
@@ -223,7 +223,7 @@ img.icon {
 
 .text-monk {
   position: absolute;
-  top: 70%;
+  top: 65%;
   left: 35%;
   color: white;
   font-family: klavika; }
