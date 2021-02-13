@@ -181,7 +181,7 @@ img.icon {
 .monk img {
   position: absolute;
   opacity: 0;
-  left: 35%;
+  left: 40%;
   top: 35%;
   width: 8em;
   height: auto;
@@ -224,7 +224,7 @@ img.icon {
 .text-monk {
   position: absolute;
   top: 65%;
-  left: 35%;
+  left: 40%;
   color: white;
   font-family: klavika; }
   .text-monk .patience {
