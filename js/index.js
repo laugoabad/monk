@@ -20,7 +20,7 @@ function getPixelsToMove() {
     var rect = div.getBoundingClientRect();
     h = rect.height;
     //calculates the pixelsToMove for responsiveness
-    if (screen.width <= 600) {
+    if (screen.width <= 425) {
         numberOfFrames = 9
     } else if (screen.width > 600 && screen.width <= 768) {
         numberOfFrames = 9.45
