@@ -15,6 +15,8 @@ function delayStart() {
 }
 //calculates the width of the background image after it resizes to fit the screen heigth, ten I divide that number in the amount of frames that I want
 function getPixelsToMove() {
+    console.log('version 1.1');
+    
     var numberOfFrames = 0;
     var div = document.getElementById("back");
     var rect = div.getBoundingClientRect();
