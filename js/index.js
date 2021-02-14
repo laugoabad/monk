@@ -21,7 +21,7 @@ function getPixelsToMove() {
     h = rect.height;
     //calculates the pixelsToMove for responsiveness
     if (screen.width <= 425) {
-        numberOfFrames = 10
+        numberOfFrames = 8
     } else if (screen.width > 425 && screen.width <= 768) {
         numberOfFrames = 9.45
     } else {
