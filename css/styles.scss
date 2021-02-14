@@ -475,6 +475,12 @@ img.icon {
   }
 }
 
+
+@media all and (orientation: landscape) {
+  .text-5 {
+    margin-top: 15em;
+  }
+}
 /*-----KEYFRAMES---------------------------------------------------*/
 
 @keyframes fadeIn {
