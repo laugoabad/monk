@@ -3,12 +3,14 @@ var slideNumber = 0;
 var prevSlideNumber = 0;
 var pixelsToMove = 0;
 
+
 function init() {
     //the setTimeout is set so that you can see the animation while loading, then it should be removed
     setTimeout(delayStart,200)
     getPixelsToMove();
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
+    console.log('version 1.3');
 }
 
 function delayStart() {
@@ -16,8 +18,6 @@ function delayStart() {
 }
 //calculates the width of the background image after it resizes to fit the screen heigth, ten I divide that number in the amount of frames that I want
 function getPixelsToMove() {
-    console.log('version 1.2');
-    
     var numberOfFrames = 0;
     var div = document.getElementById("back");
     var rect = div.getBoundingClientRect();
