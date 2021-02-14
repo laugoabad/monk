@@ -414,7 +414,9 @@ img.icon {
 
 @media all and (orientation: landscape) {
   .text-5 {
-    margin-top: 15em; } }
+    margin-top: 15em; }
+  #story {
+    bottom: 10em; } }
 
 /*-----KEYFRAMES---------------------------------------------------*/
 @keyframes fadeIn {
