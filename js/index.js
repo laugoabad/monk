@@ -6,6 +6,7 @@ var pixelsToMove = 0;
 function init() {
     //the setTimeout is set so that you can see the animation while loading, then it should be removed
     setTimeout(delayStart,200)
+    getPixelsToMove();
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
 }
@@ -34,7 +35,6 @@ function getPixelsToMove() {
 
 // animates the slider
 function animateSlide(number) {
-    getPixelsToMove();
     var margin = number * pixelsToMove;
     if (number == 8) {
         margin = 7 * pixelsToMove;
@@ -125,7 +125,6 @@ function createSlideNumberFooter(slideNumber) {
 }
 // animates the slider
 function animateSlide(number) {
-    getPixelsToMove();
     var margin = number * pixelsToMove;
     if (number == 8) {
         margin = 7 * pixelsToMove;
