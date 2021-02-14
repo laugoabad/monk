@@ -10,7 +10,7 @@ function init() {
     getPixelsToMove();
     document.getElementById('0').classList.add('square');
     textAppears(slideNumber, prevSlideNumber);
-    console.log('version 1.5');
+    console.log('version 1.6');
 }
 
 function delayStart() {
