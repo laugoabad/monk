@@ -7,7 +7,7 @@
         {
             "label": "Sass Compile",
             "type": "shell",
-            "command": "node-sass css/styles.scss css/styles.css",
+            "command": "node-sass css/styles-rem.scss css/styles-rem.css",
             "group": {
                 "kind": "build",
                 "isDefault": true
